@@ -7,7 +7,7 @@ WORKDIR /app
 SHELL ["/bin/bash", "-c"]
 
 RUN apt update
-RUN apt install automake libtool pkg-config build-essential ccache libboost-dev libboost-system-dev liblog4cplus-dev libssl-dev
+RUN apt install -y automake libtool pkg-config build-essential ccache libboost-dev libboost-system-dev liblog4cplus-dev libssl-dev
 
 RUN export PKG_CONFIG_PATH=/usr/local/lib64/pkgconfig
 RUN declare -x PATH="/usr/lib64/ccache:$PATH"
